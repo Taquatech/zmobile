@@ -1,0 +1,13 @@
+<aim-local-data>
+    {
+       
+        "PageID":"signinform",
+        "Banner":{
+            "Background":"aim://root://images/circles.jpg","Logo":"aim://root://images/logo.png"
+        }
+    }
+</aim-local-data>
+<aim-widget page id="{{PageID}}" banner="{{Banner->Background}}" bannerLogo="{{Banner->Logo}}" >
+    <bannerText><b>Z-MOBILE</b><br/>Smart Bank Smart People</bannerText>
+    <aim-import>@root://ui/activate/activatecont.aim</aim-import>
+</aim-widget>

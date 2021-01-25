@@ -1,0 +1,53 @@
+<% @root://engine/main.php MemberDetailsID GetHistory %>
+<aim-local-data>
+    {
+        "AppLogo":"aim://root://images/logo.png"
+    }
+</aim-local-data>
+<aim-widget mainhead logo="mbri-clock" title="Payment History" backClass="aim-datafill aim-trigger">
+    <backAttr>aim-src="root://ui/main/view.aim" aim-execute="Process" aim-container="signinform"</backAttr>
+        </aim-widget>
+        <aim-widget mainbody id="mainbody">
+            <aim-widget pageform id="welcome_form">
+        <div class="aprs-height-20px"></div>
+<div class="w3-row-padding">
+    <div class="w3-col m5">
+        <div class="aprs-height-20px"></div>
+        <aim-widget balancebox accnum="{{AccNum}}" accname="{{Surname}} {{Firstname}} {{Middlename}}" logo="{{AppLogo}}" amount="{{AccBal}}" class="aim-datafill aim-trigger fadeInUp animated delay-0-2s" aim-src="root://ui/main/view.aim" aim-execute="Process" aim-container="signinform">
+            {{UserAccountType}}
+            <aim-widget acctype>{{AccTypeAbbr}}</aim-widget>
+            {{UserAccountType}}
+            </aim-widget>
+        <div class="aprs-height-20px"></div>
+        <div class="w3-row-padding">
+            <div class="w3-col s6 w3-center  fadeInUp animated delay-0-3s">
+                <aim-widget circlebtn class="aim-datafill aim-trigger" aim-src="" aim-container="zmmainpage" logo="mbri-print">Print</aim-widget>
+            </div>
+            <div class="w3-col s6 w3-center  fadeInUp animated delay-0-4s">
+                <aim-widget circlebtn class="aim-datafill aim-trigger" aim-src="" aim-container="zmmainpage" logo="mbri-file">Statement</aim-widget>
+            </div>
+        </div>
+    </div>
+    <div class="w3-col m7">
+        
+        <div class="w3-large w3-margin-top w3-margin-left  fadeInUp animated delay-0-6s"><strong>Activity</strong></div>
+<div class=" fadeInUp animated delay-0-6s">
+    <aim-widget timeline >
+        {{History}}
+        <aim-widget timelienGroup day="{{Day}}" month="{{Month}}">
+            {{Record}}
+            <aim-widget indtiemline amt="{{Amt}}" info="{{Info}}" color="{{Color}}" ></aim-widget>
+            {{Record}}
+        </aim-widget>
+        {{History}}
+        {{!History}}
+        <div class="w3-large w3-margin-top w3-margin-left w3-red">No Activity Yet</div>
+        {{!History}}
+    </aim-widget>
+</div>
+    
+    </div>
+
+</div>
+</aim-widget>
+</aim-widget>

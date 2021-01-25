@@ -1,0 +1,140 @@
+<% @root://engine/main.php MemberDetailsID  %>
+
+<aim-section Failed>
+    <aim-alert MainAlert>
+        <aim-alert-title>&nbsp;</aim-alert-title>
+        <aim-alert-body>
+            <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                <aim-widget info-image src="aim://root://../images/imagecont/404.png" style=""></aim-widget>
+                <div class="aprs-height-20px"></div>
+                <div class="aprs-strong aprs-text-forecolor w3-center w3-padding">Internal Error</div>
+                <div>{{Message}}</div>
+            </aim-widget>
+            <div class="aprs-height-20px"></div>
+        </aim-alert-body>
+    </aim-alert>
+</aim-section>
+<aim-fill-data>
+    {
+        "AppLogo":"aim://root://images/logo.png",
+        "UserName":"{{Surname}}",
+        "UserImage":"aim://root://{{Passport}}",
+        "Menus":[
+        {"Group":[
+            {"ID":"mid-menu-dashboard","Logo":"mbri-home w3-text-white","Title":"Dashboard","Attr":"aim-src=\"root://ui/main/view.aim\" aim-container=\"signinform\" aim-execute=\"Process\"","Class":"aim-datafill aim-trigger aprs-active"},
+            {"ID":"mid-menu-pack","Logo":"mbri-share w3-text-indigo","Title":"Transfer","Attr":"aim-container=\"zmmainpage\" aim-src=\"root://ui/transfer/view.aim\"","Class":"aim-datafill aim-trigger"},
+            {"ID":"mid-menu-his","Logo":"mbri-clock w3-text-pink","Title":"History","Attr":"aim-container=\"zmmainpage\" aim-src=\"root://ui/history/view.aim\"","Class":"aim-datafill aim-trigger"},
+            {"ID":"mid-menu-airtime","Logo":"mbri-credit-card w3-text-orange","Title":"Airtime","Attr":"aim-container=\"zmmainpage\" aim-src=\"root://ui/airtime/view.aim\"","Class":"aim-datafill aim-trigger"},
+            {"ID":"mid-menu-data","Logo":"mbri-responsive w3-text-lime","Title":"Data","Attr":"aim-container=\"zmmainpage\" aim-src=\"root://ui/airtime/data.aim\" aim-execute=\"Process\"","Class":"aim-datafill aim-trigger"}
+        ]},
+        {"Group":[
+            
+            {"ID":"mid-menu-logout","Logo":"mbri-logout w3-text-cyan","Title":"Logout","Attr":"aim-src=\"root://ui/login/login.aim\" aim-container=\"aim-body\" ","Class":"aim-datafill aim-trigger"}
+           
+        ]}
+    ],"UserPage":"root://ui/login/logincontent.aim",
+    "UserPageContainer":"signinform",
+    "PageWelcome":"Welcome {{Surname}}",
+   
+    "PageID":"zmmainpage"
+
+    }
+</aim-fill-data>
+<aim-widget dashboard>
+    <aim-widget dashboardside title="Z-Mobile" image="aim://root://images/logo.png">
+        {{Menus}}
+        <ul class="aprs-mainnav">
+           {{Group}}
+           <li><a href="javascript:void(0)" class="{{Class}} aim-toggler" {{Attr}} aim-toggler-class="show-sidebar" aim-toggler-class-type="remove" aim-toggler-target="aim-body" ><i class="{{Logo}}"></i><span>{{Title}}</span></a></li>
+           {{Group}}
+        </ul>
+        {{Menus}}
+    </aim-widget>
+    <aim-widget dashboardbody id="{{PageID}}">
+        <aim-widget dashboardhead title="{{UserName}}" image="{{UserImage}}" menuClass="aim-datafill aim-trigger">
+            <menuAttr>aim-src="{{UserPage}}" aim-container="{{UserPageContainer}}"</menuAttr>
+                </aim-widget>
+                <aim-widget window-over></aim-widget>
+                <aim-widget mainbody id="mainbody">
+                    <aim-widget pageform id="welcome_form">
+                    <!-- TextBox -->
+                    <!-- <aim-widget pagepaddingsmall class="fadeInUp animated delay-0-2s"> -->
+                        <div class="w3-large w3-margin-left w3-margin-top"><strong>{{PageWelcome}}</strong></div>
+                    <!-- </aim-widget> -->
+                        <!-- <aim-widget info-image src="aim://root://../images/imagecont/editwel.png" style="width:280px"></aim-widget> -->
+                        <!-- <div class="aprs-height-20px"></div> -->
+                        
+                     
+                        <div class="w3-row-padding">
+                            <div class="w3-col m6">
+                                <div class="aprs-height-20px"></div>
+                                <aim-widget balancebox accnum="{{AccNum}}" accname="{{Surname}} {{Firstname}} {{Middlename}}" logo="{{AppLogo}}" amount="{{AccBal}}" class="aim-datafill aim-trigger fadeInUp animated" aim-src="root://ui/history/view.aim" aim-container="zmmainpage">
+                                {{UserAccountType}}
+                                <aim-widget acctype>{{AccTypeAbbr}}</aim-widget>
+                                {{UserAccountType}}
+                                </aim-widget>
+                            </div>
+                            <div class="w3-col m6">
+                                {{UserAccountType}}
+                                <div class="aprs-height-20px"></div>
+                                <aim-widget listbox>
+                                    <aim-widget li-leftlogo-progressive value="{{AccTypeUsage}}" logo="{{AccTypeLogo}}" title="{{AccTypeAbbr}}">
+                                        <content>{{AccTypeName}}</content>
+                                      </aim-widget>
+                                  </aim-widget>
+                                  {{UserAccountType}}
+                                  <!-- <div class="aprs-height-20px"></div>
+                                  <aim-widget listbox>
+                                    <aim-widget li-leftlogo-progressive logo="fas fa-shopping-cart" title="FDC">
+                                        <content>Food Club</content>
+                                      </aim-widget>
+                                  </aim-widget>
+                                  <div class="aprs-height-20px"></div>
+                                  <aim-widget listbox>
+                                    <aim-widget li-leftlogo-progressive logo="fas fa-university" title="GMP">
+                                        <content>Get My Properties</content>
+                                      </aim-widget>
+                                  </aim-widget> -->
+                            </div>
+                        </div>
+                        <div class="aprs-height-20px"></div>
+                        <aim-widget adbox class="w3-padding" delay="5000">
+                            
+                            <aim-widget ad image="aim://root://images/ad/ad2.jpg"></aim-widget>
+                           
+                            
+                            <aim-widget ad image="aim://root://images/ad/ad5.jpg"></aim-widget>
+                            <aim-widget ad image="aim://root://images/ad/ad6.png"></aim-widget>
+                        </aim-widget>
+        
+                        <div class="w3-center">
+                           <aim-widget circlebtn class="aim-datafill aim-trigger" aim-src="root://ui/transfer/view.aim" aim-container="zmmainpage" logo="mbri-share">Transfer</aim-widget>
+                        <aim-widget circlebtn class="aim-datafill aim-trigger" aim-src="root://ui/history/view.aim" aim-container="zmmainpage" logo="mbri-clock">History</aim-widget>
+                        <aim-widget circlebtn class="aim-datafill aim-trigger" aim-src="root://ui/airtime/view.aim" aim-container="zmmainpage" logo="mbri-credit-card">Airtime</aim-widget>
+                        <aim-widget circlebtn class="aim-datafill aim-trigger" aim-src="root://ui/airtime/data.aim" aim-container="zmmainpage" logo="mbri-responsive">Data</aim-widget>
+                        
+                        </div>
+        
+                        <div class="aprs-height-30px"></div><div class="aprs-height-30px"></div>
+                        
+                      <!--   <div class="custom-select aprs-select">
+                            <select name="totals-month" onchange="" id="totals-month">
+                               
+                            <option value="1">dfdfdf</option>
+                            
+                            </select>
+                         </div> -->
+                         
+                         <aim-widget circularbtn class="aim-datafill aim-trigger" logo="mbri-share" title="Transfer Money" aim-container="zmmainpage" aim-src="root://ui/transfer/view.aim" position="fixed-bottom-right">
+                             
+                         </aim-widget>
+                        
+                       
+                                
+                    
+                
+                  </aim-widget>
+                </aim-widget>
+    </aim-widget>
+</aim-widget>
+

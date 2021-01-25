@@ -1,0 +1,67 @@
+<% @root://engine/main.php CreateAccount  %>
+<aim-section Form>
+    <aim-widget mainhead logo="mbri-users" title="Sign Up" backClass="aim-datafill aim-trigger">
+        <backAttr>aim-src="root://ui/signup/signup.aim" aim-container="signinform"</backAttr>
+            </aim-widget>
+            <aim-widget window-wider></aim-widget>
+            <aim-widget mainbody id="mainbody">
+                <aim-widget pageform id="createacc_form">
+                <!-- TextBox -->
+                <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                    <!-- <div class="aprs-height-20px"></div> -->
+                    <!-- Name  -->
+                 <input type="hidden" name="UPhone" id="Uphone" aim-datafield="UPhone" value="{{Phone}}" class="createacc_data">
+                 <input type="hidden" name="UHash" id="UHash" aim-datafield="UHash" value="{{Hash}}" class="createacc_data">
+                 <input type="hidden" name="VType" id="VType" aim-datafield="VType" value="{{VType}}" class="createacc_data">
+                    <aim-widget textgroup >
+                    <aim-widget textbox id="surname" label="Your Name" placeholder="Surname" type="text" class="fadeInUp animated delay-0-4s" aim-datafield="Surname" iclass="createacc_data" required="required" ></aim-widget>
+                    <aim-widget textbox id="firstname" label="" placeholder="Firstname" type="text" class="fadeInUp animated delay-0-5s" aim-datafield="FirstName" iclass="createacc_data" required="required" ></aim-widget>
+                    <aim-widget textbox id="middlename" label="" placeholder="Middlename" type="text" class="fadeInUp animated delay-0-6s" aim-datafield="MiddleName" iclass="createacc_data" ></aim-widget>
+                </aim-widget>
+                    <div class="aprs-height-20px"></div>
+                       <aim-widget elementlabel target="">Gender</aim-widget>
+                         <div class="w3-row">
+                             <div class="w3-col s6">
+                                <aim-widget radiobutton id="mgender" group="gen" state="checked" class="createacc_data" aim-datafield="GenderMale" >Male</aim-widget>
+                             </div>
+                             <div class="w3-col s6">
+                                <aim-widget radiobutton id="fgender"  group="gen" class="createacc_data" aim-datafield="GenderFemale" >Female</aim-widget>
+                             </div>
+                         </div>
+                         <div class="aprs-height-20px"></div>
+                         <aim-widget textgroup >
+                            <aim-widget textbox id="passw" label="Create Password" placeholder="Input your password" type="password" class="fadeInUp animated delay-0-7s" aim-datafield="Passw" iclass="createacc_data" required="required" ></aim-widget>
+                            <aim-widget textbox id="cpassw" label="" placeholder="Confirm your password" type="password" class="fadeInUp animated delay-0-8s" aim-datafield="CPassw" iclass="createacc_data" required="required" ></aim-widget>
+                           
+                        </aim-widget>
+                        <div class="aprs-height-40px"></div>
+                        <aim-widget btn id="createaccbtn" class="fadeInUp animated delay-1s aim-datafill aim-trigger" aim-src="root://ui/signup/createacc.aim" aim-container="signinform" aim-data="{{createacc_data}}" type="submit" >Create Account</aim-widget>
+            <div class="aprs-height-30px"></div>
+                         
+                        </aim-widget>
+            
+                </aim-widget>
+         
+            
+        </aim-widget>
+</aim-section>
+
+<aim-section Failed>
+    <aim-alert MainAlert>
+        <aim-alert-title>&nbsp;</aim-alert-title>
+        <aim-alert-body>
+            <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                <aim-widget info-image src="aim://ui://images/errors/404.png" style=""></aim-widget>
+                <div class="aprs-height-20px"></div>
+                <div class="aprs-strong aprs-text-forecolor w3-center w3-padding">{{Title}}</div>
+                <div>{{Message}}</div>
+            </aim-widget>
+            <div class="aprs-height-20px"></div>
+        </aim-alert-body>
+    </aim-alert>
+</aim-section>
+
+<aim-section Success>
+  <aim-import>@root://ui/signup/acccreated.aim</aim-import>
+</aim-section>
+    

@@ -1,0 +1,16 @@
+<% @root://engine/main.php GetState %>
+<aim-alert MainAlert>
+    <aim-alert-title>State of Origin</aim-alert-title>
+    <aim-alert-body>
+        
+            <aim-widget listbox id="selsates" label="" placeholder="" class="fadeInUp animated delay-0-2s">
+                {{States}}
+                <aim-widget li-bordered class="aim-trigger" aim-trigger-target="statesetter{{SID}}" aim-trigger-action="aim-click" >{{SName}}</aim-widget>
+                <div style="display: none;" class="aim-databind statesetter{{SID}}" aim-databind-target="stateText">{{SName}}</div>
+                <div style="display: none;" class="aim-databind statesetter{{SID}}" aim-databind-target="stateid">{{SID}}</div>
+                {{States}}
+            </aim-widget>
+        
+        <div class="aprs-height-20px"></div>
+    </aim-alert-body>
+</aim-alert>

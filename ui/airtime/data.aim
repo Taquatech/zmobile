@@ -1,0 +1,73 @@
+<% @root://engine/main.php MemberDetailsID  %>
+<aim-widget mainhead logo="mbri-credit-card" title="Data Plan" backClass="aim-datafill aim-trigger">
+    <backAttr>aim-src="root://ui/main/view.aim" aim-execute="Process" aim-container="signinform"</backAttr>
+        </aim-widget>
+        <aim-widget mainbody id="mainbody">
+            <aim-widget pageform id="welcome_form">
+        <div class="aprs-height-20px"></div>
+        <div class="w3-row-padding">
+            <div class="w3-col m5">
+<div class="w3-large w3-margin-top w3-margin-bottom"><strong>Select Network</strong></div>
+       
+        <aim-widget listbox>
+            <aim-widget li-radiobutton logo="university" iclass="aim-trigger aim-toggler trans-accno" aim-toggler-target="accntbxs" aim-toggler-class="w3-hide" aim-datafield="MTN" aim-toggler-class-type="remove">
+                <div class="w3-padding w3-round card-2 aprs-strong w3-orange" style="width: 100px; height: 60px;">MTN</div>
+            </aim-widget>
+            <aim-widget li-radiobutton logo="university" iclass="aim-trigger aim-toggler trans-accno" aim-toggler-target="accntbxs" aim-toggler-class="w3-hide" aim-datafield="Glo" aim-toggler-class-type="remove">
+                <div class="w3-padding w3-round card-2 aprs-strong w3-green" style="width: 100px; height: 60px;">GLO</div>
+            </aim-widget>
+            <aim-widget li-radiobutton logo="university" iclass="aim-trigger aim-toggler trans-accno" aim-toggler-target="accntbxs" aim-toggler-class="w3-hide" aim-datafield="Airtel" aim-toggler-class-type="remove">
+                <div class="w3-padding w3-round card-2 aprs-strong w3-red" style="width: 100px; height: 60px;">AIRTEL</div>
+            </aim-widget>
+            <aim-widget li-radiobutton logo="university" iclass="aim-trigger aim-toggler trans-accno" aim-toggler-target="accntbxs" aim-toggler-class="w3-hide" aim-datafield="9Mobile" aim-toggler-class-type="remove">
+                
+                <div class="w3-padding w3-round card-2 aprs-strong w3-lime" style="width: 100px; height: 60px;">9MOBILE</div>
+            </aim-widget>
+            
+        </aim-widget>
+        <div class="aprs-height-20px"></div>
+            </div>
+            <div class="w3-col m7">
+                <div id="accntbxs" class="w3-hide">
+                    <aim-widget listbox class="fadeInUp animated delay-0-2s">
+                        <aim-widget li-checkbox logo="university" iclass="aim-trigger aim-toggler" aim-toggler-target="accntbxso" aim-toggler-class="w3-hide">
+                            <div style="text-transform: uppercase;">{{Surname}} {{Firstname}} {{Middlename}}</div>
+                            <div class="w3-padding w3-round aprs-basecolor-fade aprs-strong">{{AccNum}} | Active (₦{{AccBal}})</div>
+                        </aim-widget>
+                    </aim-widget>
+                    </div>
+                    <div class="aprs-height-20px"></div>
+                    <div id="accntbxso" class="w3-hide">
+                        <div class="w3-large w3-margin-top w3-margin-bottom"><strong>Select a Data Plan</strong></div>
+                        <div style="position: relative;z-index: 200;">
+                           <aim-widget dropdown id="trans-datap" label="" placeholder="Data Plan" iclass="trans-accno" aim-datafield="DataPlan" class="fadeInUp animated delay-0-4s w3-large" aim-get-value="true" >
+                           
+                            <option value="1">₦500 (1G Daily)</option>
+                            <option value="2">₦750 (700MB Weekly)</option>
+                            <option value="3">₦1000 (1GB Montly)</option>
+                            <option value="4">₦1500 (2GB Montly)</option>
+                            <option value="5">₦2000 (2.5GB Montly)</option>
+                            <option value="6">₦2500 (3GB Montly)</option>
+                           
+                        
+                        </aim-widget> 
+                        </div>
+                <div class="aprs-height-20px"></div>
+                <!-- <input type="hidden" name="DP" aim-datafield="DataPlan" class="trans-accno" value="1"> -->
+                <aim-widget textbox id="trans-j" label="Phone Number" placeholder="0808000000" type="text" class="fadeInUp animated delay-0-4s w3-large trans-accno" aim-datafield="PhoneNo" iclass="trans-accno" value="" ></aim-widget>
+                <div class="aprs-height-20px"></div>
+                <aim-widget textbox id="trans-accnoh" label="Enter your Password" placeholder="Password" type="password" class="fadeInUp animated delay-0-4s w3-large trans-accno" aim-datafield="UpassW" iclass="trans-accno" value="" ></aim-widget>
+                <div class="aprs-height-20px"></div>
+                <aim-widget btn id="buyairtimebtn2" class="aim-datafill aim-trigger fadeInUp animated delay-1s" aim-src="root://ui/airtime/buy.aim" aim-data="{{trans-accno}}" aim-container="zmmainpage">Buy Data Plan</aim-widget>
+                <div class="aprs-height-20px"></div>
+                </div>
+                
+            </div>
+        </div>
+
+        
+                             
+        </aim-widget>
+    </aim-widget>
+</aim-widget>
+        

@@ -1,0 +1,65 @@
+<% @root://engine/main.php MemberDetailsID %>
+<aim-widget mainhead logo="mbri-setting" title="Activate Account" backClass="aim-datafill aim-trigger">
+    <backAttr>aim-src="root://ui/activate/welcome.aim" aim-container="signinform"</backAttr>
+        </aim-widget>
+        <aim-widget window-wider></aim-widget>
+        <aim-widget mainbody id="mainbody">
+            <aim-widget pageform id="createacc_form">
+            <!-- TextBox -->
+            <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                <!-- <div class="aprs-height-20px"></div> -->
+                <!-- Name  -->
+             <input type="hidden" name="UPhone" id="Uphone" aim-datafield="UPhone" value="{{Phone}}" class="activateacc_data">
+             <input type="hidden" name="MID" id="MID" aim-datafield="MID" value="{{ID}}" class="activateacc_data">
+             <input type="hidden" name="RegLevel" id="RegLevel" aim-datafield="RegLevel" value="1" class="activateacc_data">
+
+             <div class="aprs-strong aprs-text-forecolor w3-large">{{Surname}} {{Firstname}} {{Middlename}}</div>
+             <div class="aprs-height-20px"></div>
+             <input type="hidden" name="stateid" id="stateid"  class="activateacc_data" aim-datafield="StateID" value="{{StateID}}">
+             <input type="hidden" name="lgaid" id="lgaid"  class="activateacc_data" aim-datafield="LGAID" value="{{LGAID}}">
+             <aim-widget listbox id="fillable" label="State/LGA of Origin" placeholder="" class="">
+                <aim-widget li-rightlogo logo="fas fa-chevron-right" class="aim-datafill aim-trigger" aim-src="root://ui/activate/loadstate.aim" aim-container="mainbody" textclass="stateText">{{StateName}}</aim-widget>
+                <aim-widget li-rightlogo logo="fas fa-chevron-right" class="aim-datafill aim-trigger" aim-src="root://ui/activate/loadlga.aim" aim-container="mainbody" aim-data="{{stateid}}" textclass="lgaText">{{LGAName}}</aim-widget>
+            </aim-widget>
+             
+              <div class="aprs-height-20px"></div>
+
+             
+
+             <aim-widget textbutton id="dobs" label="Date of Birth" placeholder="DD/MM/YYYY" type="text" class="" required="required" aim-datafield="DOB" iclass="activateacc_data" value="{{DOB}}"  >
+                <buttonText><i class="mbri-calendar aprs-strong aim-calender-ctr"></i></buttonText>
+                <buttonClass>aim-trigger aim-calendar aim-calender-ctr</buttonClass>
+                <buttonAttr>aim-calendar-selected-class="aprs-forecolor" aim-calendar-today-class="aprs-forecolor" aim-calendar-body-style="top:20px" aim-calendar-caption="Date of Birth" aim-calendar-target="dobs"</buttonAttr>
+            </aim-widget>
+
+             <div class="aprs-height-20px"></div>
+            <aim-widget dropdown id="maritalSt" label="Marital Status" placeholder="Select your marital status" iclass="activateacc_data" aim-datafield="MarSt">
+                {{MaritalSts}}
+                <option value="{{MName}}"  {{MSelect}} >{{MName}}</option>
+                {{MaritalSts}}
+
+                
+                <!-- <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Widowed">Widowed</option>
+                <option value="Others">Others</option> -->
+            </aim-widget>
+            <div class="aprs-height-20px"></div>
+             <aim-widget textpad id="resaddr" label="Residential Address" data-placeholder="Input residential address" aim-datafield="ResAddr" iclass="activateacc_data">{{Addr}}</aim-widget>
+            <!-- <button type="button" class="aim-trigger" aim-trigger-target="setter">Set</button>
+
+            <div class="setter aim-databind"  aim-databind-target="ss">s1</div>
+            <div class="setter aim-databind"  aim-databind-target="ss2">s2</div>
+            
+            <div id="ss">ccccc</div>
+            <div id="ss2">dddd</div> -->
+                    <div class="aprs-height-40px"></div>
+                    <aim-widget btn id="activateaccnxtbtn" class="fadeInUp animated delay-1s aim-datafill aim-trigger" aim-src="root://ui/activate/updatemem.aim" aim-container="signinform" aim-data="{{activateacc_data}}" type="submit" >Next</aim-widget>
+        <div class="aprs-height-30px"></div>
+                     
+                    </aim-widget>
+        
+            </aim-widget>
+     
+        
+    </aim-widget>

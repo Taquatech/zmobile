@@ -1,0 +1,29 @@
+<% @root://engine/main.php MemberDetailsID %>
+
+    <aim-widget mainhead logo="mbri-setting" title="Activate Account" backClass="aim-datafill aim-trigger">
+        <backAttr>aim-src="root://ui/activate/idcard.aim" aim-container="signinform" aim-execute="Process"</backAttr>
+            </aim-widget>
+            <aim-widget window-wider></aim-widget>
+            <aim-widget mainbody id="mainbody">
+                <aim-widget pageform id="createacc_form">
+                <!-- TextBox -->
+                <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                    <!-- <div class="aprs-height-20px"></div> -->
+                    <!-- Name  -->
+                 <input type="hidden" name="UPhone" id="Uphone" aim-datafield="UPhone" value="{{Phone}}" class="activateacc_data">
+                 <input type="hidden" name="MID" id="MID" aim-datafield="MID" value="{{ID}}" class="activateacc_data">
+                 <input type="hidden" name="RegLevel" id="RegLevel" aim-datafield="RegLevel" value="4" class="activateacc_data">
+                 <div class="aprs-strong aprs-text-forecolor w3-large">{{Surname}} {{Firstname}} {{Middlename}}</div>
+             <div class="aprs-height-20px"></div>
+                
+             <aim-widget passportbox id="PassP" label="Passport Photograph" src="aim://ui://images/errors/paasp.png" maxsize="600000" iclass="activateacc_data" aim-datafield="PassP"></aim-widget>
+             <div class="aprs-height-40px"></div>
+             <aim-widget checkbox id="decl" iclass="aim-trigger aim-toggler" aim-toggler-target="activateaccnxtbtn" >
+                 I here by accept that all information provided are authentic and am liable for any error.
+             </aim-widget>
+                 <div class="aprs-height-40px"></div>
+                    <aim-widget btn id="activateaccnxtbtn" style="display: none;" class="fadeInUp animated delay-0-1s aim-datafill aim-trigger" aim-src="root://ui/activate/updatemem.aim" aim-container="signinform" aim-execute="Process" aim-data="{{activateacc_data}}" type="submit" >Finish</aim-widget>
+                 <div class="aprs-height-30px"></div>
+                 </aim-widget>
+                 </aim-widget>
+                 </aim-widget>

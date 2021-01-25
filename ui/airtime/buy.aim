@@ -1,0 +1,52 @@
+<% @root://engine/airtime.php BuyAirtime  %>
+<aim-section Failed>
+    <aim-alert MainAlert>
+        <aim-alert-title>&nbsp;</aim-alert-title>
+        <aim-alert-body>
+            <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                <aim-widget info-image src="aim://ui://images/errors/404.png" style=""></aim-widget>
+                <div class="aprs-height-20px"></div>
+                <div class="aprs-strong aprs-text-forecolor w3-center w3-padding">OPERATION FAILED</div>
+                <div>{{Message}}</div>
+            </aim-widget>
+            <div class="aprs-height-20px"></div>
+        </aim-alert-body>
+    </aim-alert>
+</aim-section>
+<aim-section Prompt>
+    <aim-alert MainAlert>
+        <aim-alert-title>&nbsp;</aim-alert-title>
+        <aim-alert-body>
+            <input type="hidden" name="ATAmt" aim-datafield="Amt" class="trans-data-6p" value="{{Amt}}">
+            <input type="hidden" name="ATDescr" aim-datafield="Descr" class="trans-data-6p" value="{{Descr}}">
+            <input type="hidden" name="ATPhoneNo" aim-datafield="PhoneNo" class="trans-data-6p" value="{{PhoneNo}}">
+            <input type="hidden" name="ATDataPlan" aim-datafield="DataPlan" class="trans-data-6p" value="{{DataPlan}}">
+            
+            <input type="hidden" name="FrmPrompt" aim-datafield="FrmPrompt" class="trans-data-6p" value="1">
+            <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                <aim-widget info-image src="aim://root://images/topup.png" style=""></aim-widget>
+                <div class="aprs-height-20px"></div>
+                <div class="aprs-strong aprs-text-forecolor w3-center w3-padding">CONFIRMATION</div>
+                <div style="text-align: center;">You are about to {{Type}} <b>{{Descr}}</b> on <b>{{PhoneNo}}</b> </div>
+                <div class="aprs-height-20px"></div>
+                <aim-widget btn id="buyrechbtn" class="aim-datafill aim-trigger fadeInUp animated delay-1s" aim-data="{{trans-data-6p}}" aim-src="root://ui/airtime/buy.aim" aim-container="zmmainpage">Continue</aim-widget>
+            </aim-widget>
+            <div class="aprs-height-20px"></div>
+        </aim-alert-body>
+    </aim-alert>
+</aim-section>
+<aim-section Success>
+    <aim-alert MainAlert>
+        <aim-alert-title>&nbsp;</aim-alert-title>
+        <aim-alert-body>
+            <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                <aim-widget info-image src="aim://root://ui/images/topup.png" style=""></aim-widget>
+                <div class="aprs-height-20px"></div>
+                <div class="aprs-strong aprs-text-forecolor w3-center w3-padding">OPERATION SUCCESSFUL</div>
+                <div style="text-align: center;">{{Message}}</div>
+                <button class="w3-hide aim-datafill aim-autoload" aim-src="root://ui/airtime/view.aim" aim-container="zmmainpage">Reload</button>
+            </aim-widget>
+            <div class="aprs-height-20px"></div>
+        </aim-alert-body>
+    </aim-alert>
+</aim-section>

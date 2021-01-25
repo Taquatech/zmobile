@@ -1,0 +1,54 @@
+<% @root://engine/main.php MemberDetailsID %>
+
+    <aim-widget mainhead logo="mbri-setting" title="Activate Account" backClass="aim-datafill aim-trigger">
+        <backAttr>aim-src="root://ui/activate/bus.aim" aim-container="signinform" aim-execute="Process"</backAttr>
+            </aim-widget>
+            <aim-widget window-wider></aim-widget>
+            <aim-widget mainbody id="mainbody">
+                <aim-widget pageform id="createacc_form">
+                <!-- TextBox -->
+                <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                    <!-- <div class="aprs-height-20px"></div> -->
+                    <!-- Name  -->
+                 <input type="hidden" name="UPhone" id="Uphone" aim-datafield="UPhone" value="{{Phone}}" class="activateacc_data">
+                 <input type="hidden" name="MID" id="MID" aim-datafield="MID" value="{{ID}}" class="activateacc_data">
+                 <input type="hidden" name="RegLevel" id="RegLevel" aim-datafield="RegLevel" value="3" class="activateacc_data">
+
+                 <div class="aprs-strong aprs-text-forecolor w3-large">{{Surname}} {{Firstname}} {{Middlename}}</div>
+
+             <div class="aprs-height-20px"></div>
+
+             <aim-widget dropdown id="idcardtype" label="Means of Identification" placeholder="Select Means of Identification" iclass="activateacc_data" aim-datafield="IDType" class="" aim-get-value="true" >
+                 {{IDCards}}
+                 <option value="{{$}}" {{IDSelect}}>{{IDName}}</option>
+                 {{IDCards}}
+
+                
+                <!-- <option value="2">Voters Card</option>
+                <option value="3">Drivers License</option>
+                <option value="4">International Passport</option> -->
+            </aim-widget>
+
+            <div class="aprs-height-20px"></div>
+
+            <aim-widget textbox id="idcardnum" label="ID Number" placeholder="Input ID Unique Number" type="text" class="" aim-datafield="IDNum" iclass="activateacc_data" value="{{IDNum}}" ></aim-widget>
+
+                 <div class="aprs-height-20px"></div>
+
+                 <aim-widget textbutton id="idvaldate" label="Validity Date" placeholder="DD/MM/YYYY" type="text" class="" required="required" aim-datafield="ExpDate" iclass="activateacc_data" value="{{IDExpDate}}" >
+                    <buttonText><i class="mbri-calendar aprs-strong aim-calender-ctr"></i></buttonText>
+                    <buttonClass>aim-trigger aim-calendar aim-calender-ctr</buttonClass>
+                    <buttonAttr>aim-calendar-selected-class="aprs-forecolor" aim-calendar-today-class="aprs-forecolor" aim-calendar-body-style="top:20px" aim-calendar-caption="ID Validity Date" aim-calendar-target="idvaldate"</buttonAttr>
+                </aim-widget>
+
+                <div class="aprs-height-20px"></div>
+
+                <aim-widget imagebox id="idScan" label="Scanned ID Card" src="aim://ui://images/upload.png" maxsize="600000" iclass="activateacc_data" aim-datafield="ScanID"></aim-widget>
+
+                 <div class="aprs-height-40px"></div>
+
+                    <aim-widget btn id="activateaccnxtbtn" class="fadeInUp animated delay-1s aim-datafill aim-trigger" aim-src="root://ui/activate/updatemem.aim" aim-container="signinform" aim-data="{{activateacc_data}}" type="submit" >Next</aim-widget>
+                 <div class="aprs-height-30px"></div>
+                 </aim-widget>
+                 </aim-widget>
+                 </aim-widget>

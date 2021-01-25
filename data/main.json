@@ -1,0 +1,18 @@
+{
+    "bannerText":"THIS GENERATION BANK",
+    "AppName":"ZMobile",
+  
+    "Header":{
+        "Logo":"mbri-home",
+        "Title":"Dashboard"
+    },
+    "AppLogo":"aim://me://images/iconsm.png",
+    "AppBaseColor":"rgb(113,35,93)",
+    "AppForeColor":"rgb(218,138,27)",
+    "AppBaseColorFade":"rgba(113,35,93,0.4)",
+    "UserAccountType":[
+        {"AccTypeID":"1","AccTypeAbbr":"PRE","AccTypeName":"Current Account","AccTypeProgress":85,"AccTypeLogo":"mbri-share","AccTypeUsage":"36"},
+        {"AccTypeID":"2","AccTypeAbbr":"SAV","AccTypeName":"Savings Account","AccTypeProgress":85,"AccTypeLogo":"mbri-credit-card","AccTypeUsage":"81"},
+        {"AccTypeID":"3","AccTypeAbbr":"FAM","AccTypeName":"Family Account","AccTypeProgress":85,"AccTypeLogo":"mbri-responsive","AccTypeUsage":"34"}
+       ]
+}

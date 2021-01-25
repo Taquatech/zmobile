@@ -1,0 +1,47 @@
+<% @root://engine/main.php PrepareSignUp  %>
+{
+    "Username":{
+        "ID":"UPhone","Label":"Phone number","Placeholder":"Input phone number","Type":"number","Class":"signuptext"
+    },
+    {{ComfirmVer}}
+    "Comfirm":{
+        "ID":"cUPhone","Label":"Comfirm phone numbers","Placeholder":"Re-type your phone number","Class":"signuptext","Type":"number"
+    },
+    {{ComfirmVer}}
+    {{OTPVer}}
+    "Password":{
+        "ID":"otp","Label":"Enter OTP","Placeholder":"6 digits","ActionText":"Get OTP","Class":"signuptext","ActionClass":"aim-datafill aim-trigger","ActionAttr":"aim-src=\"root://ui/signup/getotp.aim\" aim-container=\"aim-body\" aim-data=\"{{UPhone}}\" ","Type":"password"
+    },
+    {{OTPVer}}
+    "Button":{
+        "ID":"signup_btn","Class":"aim-datafill aim-trigger","Attr":"aim-src=\"root://ui/signup/verify.aim\" aim-container=\"signinform\" aim-data=\"{{signuptext}}\" aim-execute=\"Process\" type=\"submit\" ","Text":"Confirm"
+    },
+    "Banner":{
+        "Background":"aim://root://../images/bbwa/SanMarino.jpg","Logo":"aim://root://../images/logo/logosm_white.png"
+    }
+}
+<aim-import>@ui://templates/signincontent.aim</aim-import>
+<aim-fill-data>
+    {
+        "Username":{
+            "ID":"UPhone","Label":"Phone number","Placeholder":"Input phone number","Type":"number","Class":"signuptext"
+        },
+        {{ComfirmVer}}
+        "Comfirm":{
+            "ID":"cUPhone","Label":"Comfirm phone numbers","Placeholder":"Re-type your phone number","Class":"signuptext","Type":"number"
+        },
+        {{ComfirmVer}}
+        {{OTPVer}}
+        "Password":{
+            "ID":"otp","Label":"Enter OTP","Placeholder":"6 digits","ActionText":"Get OTP","Class":"signuptext","ActionClass":"aim-datafill aim-trigger","ActionAttr":"aim-src=\"root://ui/signup/getotp.aim\" aim-container=\"aim-body\" aim-data=\"{{UPhone}}\" ","Type":"password"
+        },
+        {{OTPVer}}
+        "Button":{
+            "ID":"signup_btn","Class":"aim-datafill aim-trigger","Attr":"aim-src=\"root://ui/signup/verify.aim\" aim-container=\"signinform\" aim-data=\"{{signuptext}}\" aim-execute=\"Process\" type=\"submit\" ","Text":"Confirm"
+        },
+        "Banner":{
+            "Background":"aim://root://../images/bbwa/SanMarino.jpg","Logo":"aim://root://../images/logo/logosm_white.png"
+        },
+        "Footer":"<a class='aprs-text-forecolor w3-large aim-datafill aim-trigger aprs-no-decoration' aim-src='root://ui/login/logincontent.aim' href='javascript:void(0)' aim-container='signinform'>Log in</a> <br/> By clicking <strong>Confirm</strong> you accept the <br/> <a class=\"aprs-text-forecolor aprs-no-decoration\" href=\"#\">Terms and Conditions</a>"
+    }
+</aim-fill-data>

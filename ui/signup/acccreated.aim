@@ -1,0 +1,54 @@
+<% @root://engine/main.php MemberDetailsID  %>
+<aim-section Failed>
+    <aim-alert MainAlert>
+        <aim-alert-title>&nbsp;</aim-alert-title>
+        <aim-alert-body>
+            <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                <aim-widget info-image src="aim://ui://images/errors/404.png" style=""></aim-widget>
+                <div class="aprs-height-20px"></div>
+                <div class="aprs-strong aprs-text-forecolor w3-center w3-padding">Internal Error</div>
+                <div>{{Message}}</div>
+            </aim-widget>
+            <div class="aprs-height-20px"></div>
+        </aim-alert-body>
+    </aim-alert>
+</aim-section>
+<aim-widget mainhead logo="mbri-features" title="Account Created" backClass="aim-datafill aim-trigger">
+    <backAttr>aim-src="root://ui/signup/signup.aim" aim-container="signinform"</backAttr>
+        </aim-widget>
+        <aim-widget window-wider></aim-widget>
+        <aim-widget mainbody id="mainbody">
+            <aim-widget pageform id="createacc_form">
+            <!-- TextBox -->
+            <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                <aim-widget info-image src="aim://ui://images/errors/success.png" style="width:280px"></aim-widget>
+                <div class="aprs-height-20px"></div>
+                <div class="aprs-strong aprs-text-forecolor w3-center w3-padding">CONGRATULATIONS</div>
+                <div class="w3-center w3-padding"><strong>{{Surname}}</strong>, your <strong class="aprs-text-forecolor">{{AppName}}</strong> account is created successfully</div>
+                <div class="aprs-height-20px"></div>
+                <aim-widget listbox>
+                  <aim-widget li-bordered>
+                      <div class="w3-row">
+                          <div class="w3-col s6">Acc. No.</div>
+                          <div class="w3-col s6 aprs-text-forecolor">{{AccNum}}</div>
+                      </div>
+                    </aim-widget>
+                    <aim-widget li-bordered>
+                        <div class="w3-row">
+                            <div class="w3-col s6">Acc. Name.</div>
+                            <div class="w3-col s6 aprs-text-forecolor">{{Surname}} {{Firstname}} {{Middlename}}</div>
+                        </div>
+                      </aim-widget>
+                      <aim-widget li-bordered>
+                        <div class="w3-row">
+                            <div class="w3-col s6">Acc. Status</div>
+                            <div class="w3-col s6 aprs-text-forecolor">Inactive</div>
+                        </div>
+                      </aim-widget>
+                </aim-widget>
+                <div class="aprs-height-40px"></div>
+                        <aim-widget btn id="lgbtn" class="fadeInUp animated delay-0.4s aim-datafill aim-trigger" aim-src="root://ui/login/logincontent.aim" aim-container="signinform" aim-data="">Login</aim-widget>
+            <div class="aprs-height-30px"></div>
+          </aim-widget>
+          </aim-widget>
+        </aim-widget>

@@ -1,0 +1,38 @@
+<% @root://engine/main.php MemberDetailsID  %>
+<aim-widget mainhead logo="mbri-share" title="Transfer Money" backClass="aim-datafill aim-trigger">
+    <backAttr>aim-src="root://ui/main/view.aim" aim-execute="Process" aim-container="signinform"</backAttr>
+        </aim-widget>
+        <aim-widget mainbody id="mainbody">
+            <aim-widget pageform id="welcome_form">
+        <div class="aprs-height-20px"></div>
+        <div class="w3-row-padding">
+            <div class="w3-col m6">
+<div class="w3-large  w3-margin-top w3-margin-bottom fadeInUp animated delay-0-1s"><strong>Transfer From</strong></div>
+        <aim-widget listbox class="fadeInUp animated delay-0-2s">
+            <aim-widget li-checkbox logo="university" iclass="aim-trigger aim-toggler" aim-toggler-target="accntbx">
+                <div style="text-transform: uppercase;">{{Surname}} {{Firstname}} {{Middlename}}</div>
+                <div class="w3-padding w3-round aprs-basecolor-fade aprs-strong">{{AccNum}} | Active (₦{{AccBal}})</div>
+            </aim-widget>
+        </aim-widget>
+        
+            </div>
+            <div class="w3-col m6">
+                <div id="accntbx" style="display: none;">
+<div class="w3-large w3-margin-top w3-margin-bottom fadeInUp animated delay-0-2s"><strong>How much would you like to Send?</strong></div>
+                <aim-widget textbox id="tarns-amt" label="" placeholder="₦0.00" type="number" class="fadeInUp animated delay-0-3s w3-xxlarge" aim-datafield="Amt" iclass="transfer_data" value="" ></aim-widget>
+                <div class="aprs-height-20px"></div>
+                <div class="w3-large w3-margin-top w3-margin-bottom fadeInUp animated delay-0-4s"><strong>Enter Account Number</strong></div>
+                <aim-widget textbox id="trans-accno" label="" placeholder="0000000000" type="text" class="fadeInUp animated delay-0-5s w3-large" aim-datafield="AccNo" iclass="transfer_data" value="" ></aim-widget>
+                <div class="aprs-height-20px"></div>
+                <aim-widget btn id="perdormtransbtn" class="aim-datafill aim-trigger fadeInUp animated delay-0-6s" aim-data="{{transfer_data}}" aim-src="root://ui/transfer/process.aim" aim-container="zmmainpage">Verify Account</aim-widget>
+                </div>
+                
+            </div>
+        </div>
+
+        
+                             
+        </aim-widget>
+        </aim-widget>
+        </aim-widget>
+        

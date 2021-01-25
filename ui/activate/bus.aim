@@ -1,0 +1,33 @@
+<% @root://engine/main.php MemberDetailsID %>
+
+    <aim-widget mainhead logo="mbri-setting" title="Activate Account" backClass="aim-datafill aim-trigger">
+        <backAttr>aim-src="root://ui/activate/basic.aim" aim-container="signinform" aim-execute="Process"</backAttr>
+            </aim-widget>
+            <aim-widget window-wider></aim-widget>
+            <aim-widget mainbody id="mainbody">
+                <aim-widget pageform id="createacc_form">
+                <!-- TextBox -->
+                <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                    <!-- <div class="aprs-height-20px"></div> -->
+                    <!-- Name  -->
+                 <input type="hidden" name="UPhone" id="Uphone" aim-datafield="UPhone" value="{{Phone}}" class="activateacc_data">
+                 <input type="hidden" name="MID" id="MID" aim-datafield="MID" value="{{ID}}" class="activateacc_data">
+                 <input type="hidden" name="RegLevel" id="RegLevel" aim-datafield="RegLevel" value="2" class="activateacc_data">
+                 <div class="aprs-strong aprs-text-forecolor w3-large">{{Surname}} {{Firstname}} {{Middlename}}</div>
+             <div class="aprs-height-20px"></div>
+                 <!-- <aim-widget textbox id="bvn" label="Bank Verification Number" placeholder="Input BVN" type="number" class="fadeInUp animated delay-0-3s" aim-datafield="BVN" iclass="activateacc_data" value="{{BVN}}" ></aim-widget>
+                 <div class="aprs-height-20px"></div> -->
+                 <aim-widget textbox id="occupation" label="Occupation" placeholder="Input Occupation" type="text" class="fadeInUp animated delay-0-4s" aim-datafield="Occup" iclass="activateacc_data" value="{{Occupation}}" ></aim-widget>
+                 <div class="aprs-height-20px"></div>
+
+                 <aim-widget textbox id="busName" label="Business Name" placeholder="Input Business Name" type="text" class="fadeInUp animated delay-0-5s" aim-datafield="OffName" iclass="activateacc_data" value="{{BusName}}" ></aim-widget>
+                 <div class="aprs-height-20px"></div>
+                 
+                 <aim-widget textpad id="offaddr" label="Office Address" data-placeholder="Input office address" aim-datafield="OffAddr" iclass="activateacc_data" value="{{BusAddr}}"></aim-widget>
+
+                 <div class="aprs-height-40px"></div>
+                    <aim-widget btn id="activateaccnxtbtn" class="fadeInUp animated delay-1s aim-datafill aim-trigger" aim-src="root://ui/activate/updatemem.aim" aim-container="signinform" aim-execute="Process" aim-data="{{activateacc_data}}" type="submit" >Next</aim-widget>
+                 <div class="aprs-height-30px"></div>
+                 </aim-widget>
+                 </aim-widget>
+                 </aim-widget>

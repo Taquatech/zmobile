@@ -1,0 +1,54 @@
+<% @root://engine/main.php MemberDetailsID  %>
+<aim-section Failed>
+    <aim-alert MainAlert>
+        <aim-alert-title>&nbsp;</aim-alert-title>
+        <aim-alert-body>
+            <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                <aim-widget info-image src="aim://ui://images/errors/404.png" style=""></aim-widget>
+                <div class="aprs-height-20px"></div>
+                <div class="aprs-strong aprs-text-forecolor w3-center w3-padding">Internal Error</div>
+                <div>{{Message}}</div>
+            </aim-widget>
+            <div class="aprs-height-20px"></div>
+        </aim-alert-body>
+    </aim-alert>
+</aim-section>
+<aim-widget mainhead logo="mbri-setting" title="Activate Account" backClass="aim-datafill aim-trigger">
+    <backAttr>aim-src="root://ui/login/logincontent.aim" aim-container="signinform"</backAttr>
+        </aim-widget>
+        <aim-widget window-wider></aim-widget>
+        <aim-widget mainbody id="mainbody">
+            <aim-widget pageform id="welcome_form">
+            <!-- TextBox -->
+            <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                <aim-widget info-image src="aim://ui://images/errors/sent.png" style="width:180px"></aim-widget>
+                <div class="aprs-height-20px"></div>
+                <div class="aprs-strong aprs-text-forecolor w3-center w3-padding">Activation Request Sent</div>
+                <div class="w3-center w3-padding"><strong>{{Surname}}</strong>, your <strong class="aprs-text-forecolor">{{AppName}}</strong> account activation request is sent successfully, we will get back to you soon</div>
+                <div class="aprs-height-20px"></div>
+                <aim-widget listbox>
+                  <aim-widget li-bordered>
+                      <div class="w3-row">
+                          <div class="w3-col s6">Account Number</div>
+                          <div class="w3-col s6 aprs-text-forecolor">{{AccNum}}</div>
+                      </div>
+                    </aim-widget>
+                    <aim-widget li-bordered>
+                        <div class="w3-row">
+                            <div class="w3-col s6">Account Name</div>
+                            <div class="w3-col s6 aprs-text-forecolor">{{Surname}} {{Firstname}} {{Middlename}}</div>
+                        </div>
+                      </aim-widget>
+                      <aim-widget li-bordered>
+                        <div class="w3-row">
+                            <div class="w3-col s6">Account Status</div>
+                            <div class="w3-col s6 aprs-text-forecolor">Pending</div>
+                        </div>
+                      </aim-widget>
+                </aim-widget>
+                <div class="aprs-height-40px"></div>
+                        <aim-widget btn id="lgbtn" class="fadeInUp animated delay-0.4s aim-datafill aim-trigger" aim-src="root://ui/login/logincontent.aim" aim-execute="Process" aim-container="signinform" aim-data="">Sign out</aim-widget>
+            <div class="aprs-height-30px"></div>
+          </aim-widget>
+          </aim-widget>
+        </aim-widget>

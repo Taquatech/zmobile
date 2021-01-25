@@ -1,0 +1,22 @@
+
+<aim-local-data>
+    {
+        "PageLogo":"aim://root://images/logo.png",
+        "PageLogoTitle":"Welcome to ZMobile",
+        "PageTitle":"Activate Account",
+        "PageID":"signinform",
+        "Username":{
+            "ID":"UPhone","Label":"Phone number","Placeholder":"Input phone number","Type":"number","Class":"logintext"
+        },
+        "Comfirm":{},
+        "Password":{
+            "ID":"openbal","Label":"Opening Balance","Placeholder":"Input the Opening Balance","Class":"logintext","ActionText":"<i class='mbri-preview aprs-strong'></i>","ActionClass":"aim-toggler aim-trigger","ActionAttr":"aim-toggler-target=\"openbal\" aim-toggler-attr=\"type\" aim-toggler-val=\"password\" aim-toggler-altval=\"text\" aim-toggler-show=\"openbal\" ","Type":"text"
+        },
+        "Button":{
+            "ID":"activateacc_btn","Class":"aim-datafill aim-trigger","Attr":"aim-src=\"root://ui/activate/perform.aim\" aim-container=\"signinform\" aim-data=\"{{logintext}}\" aim-execute=\"Process\"  type=\"submit\" ","Text":"Activate"
+        },
+        "Footer":"Note, if account already exist, the Balance will be updated to the Opning Balance Specified"
+    }
+</aim-local-data>
+
+    <aim-import>@ui://templates/signincontent.aim</aim-import>

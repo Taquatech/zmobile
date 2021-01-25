@@ -1,0 +1,26 @@
+<% @root://engine/main.php Logout  %>
+<aim-local-data>
+    {
+        "PageLogo":"aim://root://images/logo.png",
+        "PageLogoTitle":"Welcome to ZMobile",
+        "PageTitle":"Sign In",
+        "PageID":"signinform",
+        "Username":{
+            "ID":"UPhone","Label":"Phone number","Placeholder":"Input phone number","Type":"number","Class":"logintext"
+        },
+        "Comfirm":{},
+        "Password":{
+            "ID":"lpassw","Label":"Password","Placeholder":"Input your password","Class":"logintext","ActionText":"<i class='mbri-preview aprs-strong'></i>","ActionClass":"aim-toggler aim-trigger","ActionAttr":"aim-toggler-target=\"lpassw\" aim-toggler-attr=\"type\" aim-toggler-val=\"password\" aim-toggler-altval=\"text\" aim-toggler-show=\"lpassw\" ","Type":"password"
+        },
+        "Button":{
+            "ID":"signin_btn","Class":"aim-datafill aim-trigger","Attr":"aim-src=\"root://ui/login/verify.aim\" aim-container=\"signinform\" aim-data=\"{{logintext}}\" aim-execute=\"Process\"  type=\"submit\" ","Text":"Confirm"
+        },
+        "Footer":"I don't have an <strong>{{AppName}} Account</strong> yet<br/> <a class='aim-datafill aim-trigger aprs-text-forecolor w3-large aprs-no-decoration' aim-src='root://ui/signup/signup.aim' aim-container='signinform' href='javascript:void(0)'>Sign Up Now</a>"
+    }
+</aim-local-data>
+
+    <aim-import>@ui://templates/signincontent.aim</aim-import>
+
+
+    
+

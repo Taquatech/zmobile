@@ -1,0 +1,33 @@
+<% @root://engine/main.php GetLGA %>
+<aim-section Success>
+<aim-alert MainAlert>
+    <aim-alert-title>Local Government Area</aim-alert-title>
+    <aim-alert-body>
+        
+            <aim-widget listbox id="sellga" label="" placeholder="" class="fadeInUp animated delay-0-2s">
+                {{LGAs}}
+                <aim-widget li-bordered class="aim-trigger" aim-trigger-target="lgasetter{{LGAID}}" aim-trigger-action="aim-click" >{{LGAName}}</aim-widget>
+                <div style="display: none;" class="aim-databind lgasetter{{LGAID}}" aim-databind-target="lgaText">{{LGAName}}</div>
+                <div style="display: none;" class="aim-databind lgasetter{{LGAID}}" aim-databind-target="lgaid">{{LGAID}}</div>
+                {{LGAs}}
+            </aim-widget>
+        
+        <div class="aprs-height-20px"></div>
+    </aim-alert-body>
+</aim-alert>
+</aim-section>
+
+<aim-section Failed>
+    <aim-alert MainAlert>
+        <aim-alert-title>&nbsp;</aim-alert-title>
+        <aim-alert-body>
+            <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                <aim-widget info-image src="aim://ui://images/errors/404.png" style=""></aim-widget>
+                <div class="aprs-height-20px"></div>
+                <div class="aprs-strong aprs-text-forecolor w3-center w3-padding">{{Title}}</div>
+                <div>{{Message}}</div>
+            </aim-widget>
+            <div class="aprs-height-20px"></div>
+        </aim-alert-body>
+    </aim-alert>
+</aim-section>
